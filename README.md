@@ -5,7 +5,7 @@ Designed to work with [virtual-dom](https://github.com/Matt-Esch/virtual-dom) `p
 javascript:
 ```
 var patchView = require('virtual-dom-patch-viewer')
-
+// get patch, then...
 patchView(patch)
 ```
 
