@@ -28,7 +28,7 @@ module.exports = function patchReport (patch, showtag) {
           || (Array.isArray(showtag) && -1 !== showtag.indexOf(vpatch.vNode.tagName.toLowerCase()))
         )
     ) ) {
-      console.log(ii, actions[vpatch.type], vpatch.vNode && vpatch.vNode.tagName, vpatch.patch)
+      console.log(ii, actions[vpatch.type], vpatch.vNode && vpatch.vNode.tagName, vpatch.vNode, vpatch.patch)
     }
   }
 }
