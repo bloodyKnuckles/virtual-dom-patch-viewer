@@ -19,6 +19,13 @@ console:
 16 PROPS A Object {attributes: Object}
 ```
 
+Optionally you can limit the report to one or more particular tags.
+
+```
+patchView(patch, 'div')
+patchView(patch, ['div', 'h2'])
+```
+
 ### license
 
 MIT

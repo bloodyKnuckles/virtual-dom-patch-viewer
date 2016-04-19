@@ -1,6 +1,11 @@
 var actions = ['NONE', 'VTEXT', 'VNODE', 'WIDGET', 'PROPS', 'ORDER', 'INSERT', 'REMOVE', 'THUNK']
 
 module.exports = function patchReport (patch, showtag) {
+  if ( Array.isArray(showtag) ) {
+    showtag = showtag.map(function (tag) {
+      return tag.toLowerCase()
+    })
+  }
   Object.keys(patch).forEach(function (key) {
     if ( 'a' === key && !showtag ) {
       console.log('a', patch[key])
@@ -16,7 +21,13 @@ module.exports = function patchReport (patch, showtag) {
   })
 
   function report (ii, vpatch) {
-    if ( !showtag || (vpatch.vNode && vpatch.vNode.tagName && showtag.toLowerCase() === vpatch.vNode.tagName.toLowerCase()) ) {
+    if ( !showtag || (
+      vpatch.vNode && vpatch.vNode.tagName
+        && (
+          ('string' === typeof showtag && showtag.toLowerCase() === vpatch.vNode.tagName.toLowerCase())
+          || (Array.isArray(showtag) && -1 !== showtag.indexOf(vpatch.vNode.tagName.toLowerCase()))
+        )
+    ) ) {
       console.log(ii, actions[vpatch.type], vpatch.vNode && vpatch.vNode.tagName, vpatch.patch)
     }
   }
