@@ -1,5 +1,6 @@
 # virtual-dom-patch-viewer
 
+javascript:
 ```
 var patchView = require('virtual-dom-patch-viewer')
 
