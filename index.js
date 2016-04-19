@@ -1,8 +1,8 @@
 var actions = ['NONE', 'VTEXT', 'VNODE', 'WIDGET', 'PROPS', 'ORDER', 'INSERT', 'REMOVE', 'THUNK']
 
-module.exports = function patchReport (patch) {
+module.exports = function patchReport (patch, showtag) {
   Object.keys(patch).forEach(function (key) {
-    if ( 'a' === key ) {
+    if ( 'a' === key && !showtag ) {
       console.log('a', patch[key])
     }
     else if ( Array.isArray(patch[key]) ) {
@@ -16,6 +16,8 @@ module.exports = function patchReport (patch) {
   })
 
   function report (ii, vpatch) {
-    console.log(ii, actions[vpatch.type], vpatch.vNode && vpatch.vNode.tagName, vpatch.patch)
+    if ( !showtag || (vpatch.vNode && vpatch.vNode.tagName && showtag.toLowerCase() === vpatch.vNode.tagName.toLowerCase()) ) {
+      console.log(ii, actions[vpatch.type], vpatch.vNode && vpatch.vNode.tagName, vpatch.patch)
+    }
   }
 }
