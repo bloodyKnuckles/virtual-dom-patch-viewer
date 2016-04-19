@@ -1,6 +1,6 @@
 # virtual-dom-patch-viewer
 
-Designed to work with [virtual-dom](https://github.com/Matt-Esch/virtual-dom) `patch` method.
+Designed to work with the patch object returned by the [virtual-dom](https://github.com/Matt-Esch/virtual-dom) `diff` method.
 
 javascript:
 ```
