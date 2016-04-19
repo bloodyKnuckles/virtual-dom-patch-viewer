@@ -1,0 +1,25 @@
+{
+  "name": "virtual-dom-patch-viewer",
+  "version": "0.1.0",
+  "description": "View the details of a Virtual-DOM patch in the console.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloodyKnuckles/virtual-dom-patch-viewer.git"
+  },
+  "keywords": [
+    "virtual-dom",
+    "patch",
+    "view",
+    "report"
+  ],
+  "author": "Jay Scott ANDERSON",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloodyKnuckles/virtual-dom-patch-viewer/issues"
+  },
+  "homepage": "https://github.com/bloodyKnuckles/virtual-dom-patch-viewer#readme"
+}
