@@ -1,5 +1,7 @@
 # virtual-dom-patch-viewer
 
+Designed to work with [virtual-dom](https://github.com/Matt-Esch/virtual-dom) `patch` method.
+
 javascript:
 ```
 var patchView = require('virtual-dom-patch-viewer')
