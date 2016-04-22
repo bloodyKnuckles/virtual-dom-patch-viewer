@@ -1,6 +1,6 @@
 {
   "name": "virtual-dom-patch-viewer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "View the details of a Virtual-DOM patch in the console.",
   "main": "index.js",
   "scripts": {
