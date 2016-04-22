@@ -38,6 +38,19 @@ patchView(patch, {type:['remove','insert'], tag:'script'})
 
 // show patches that are type PROPS, and affect DIV or ANCHOR tags
 patchView(patch, {type:'props', tag:['div','a']})
+
+// exclude patches with type REMOVE
+patchView(patch, {exclude:'REMOVE'})
+```
+
+There is a supplementary `find` method made available on the patchView function. Provide a
+virtual-dom object and a node index and the `find` method returns the node path to the given index.
+
+```
+console.log(
+  patchView.find(vdom, 4)
+)
+// HTML(0) > HEAD(1) > TITLE(3) > patchdom (text/4)
 ```
 
 ### license
