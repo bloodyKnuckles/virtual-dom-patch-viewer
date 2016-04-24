@@ -80,13 +80,13 @@ function patchView (patch, opts) {
         )
       )
     ) {
-      var msg
+      /*var msg
       switch ( types[vpatch.type] ) {
         case 'VTEXT': msg = 'VTEXT: ' + vpatch.vNode.text    + ' -> ' + vpatch.patch.text + ':'; break
         case 'VNODE': msg = 'VNODE: ' + vpatch.vNode.tagName + ' -> ' + vpatch.patch.tagName + ':'; break
         default: msg = types[vpatch.type]
-      }
-      console.log(msg, find(patch.a, parseInt(ii, 10)), vpatch.vNode, vpatch.patch)
+      }*/
+      console.log(types[vpatch.type], find(patch.a, parseInt(ii, 10)), vpatch.vNode, vpatch.patch)
     }
   }
 

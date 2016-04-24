@@ -12,13 +12,12 @@ patchView(patch)
 
 console:
 ```
-18 PROPS H2 VirtualNode {...} Object {...}
-19 VTEXT undefined VirtualText {...} VirtualText {...}
-20 REMOVE SPAN VirtualNode {...} undefined
-23 PROPS DIV VirtualNode {...} Object {...}
-24 VTEXT undefined VirtualText {...} VirtualText {...}
-25 REMOVE BUTTON VirtualNode {...} undefined
-27 REMOVE undefined VirtualText {...} undefined
+REMOVE HTML(0) > HEAD(1) > STYLE(8) (node/8) VirtualNode {...} undefined
+INSERT HTML(0) > BODY(10) (node/10) null VirtualText {...}
+PROPS HTML(0) > BODY(10) > DIV(19) > H2(21) (node/21) VirtualNode {...} Object {...}
+VTEXT HTML(0) > BODY(10) > DIV(19) > H2(21) > Hello (text/22) VirtualText {...} VirtualText {...}
+REMOVE HTML(0) > BODY(10) > DIV(19) > H2(21) > SPAN(23) (node/23) VirtualNode {...} undefined
+VNODE HTML(0) > BODY(10) > DIV(19) > BUTTON(26) (node/26) VirtualNode {...} VirtualNode {...}
 ```
 
 Optionally you can limit the report to particular types or tags.
